@@ -157,12 +157,12 @@ SIMPLE_JWT = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.pragathiedu.com'  # Replace with your actual domain
+EMAIL_HOST = ''  # Replace with your actual domain
 EMAIL_PORT = 587  # Use 587 for TLS, or 465 for SSL
 EMAIL_USE_TLS = True  # Set to True if using port 587
 EMAIL_USE_SSL = False  # Use True for port 465
-EMAIL_HOST_USER = 'info@pragathiedu.com'  # Your Webmail email
-EMAIL_HOST_PASSWORD = 'Pragathi@2020'  # Your Webmail password
+EMAIL_HOST_USER = ''  # Your Webmail email
+EMAIL_HOST_PASSWORD = ''  # Your Webmail password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-ADMIN_EMAIL = 'info@pragathiedu.com'  # Change to the admin's email
+ADMIN_EMAIL = ''  # Change to the admin's email
 SMTP_FROM_NAME = 'Pragathi Group of Education',
