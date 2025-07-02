@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>About PRAGATHI GROUP OF INSTITUTIONS | College & Tuition Services</title>
+  <meta name="keywords" content="">
+  <meta name="description"
+    content="PRAGATHI GROUP OF INSTITUTIONS is a premier college offering quality education and specialized tuition services. We are dedicated to shaping bright futures with expert guidance, personalized learning, and a focus on academic excellence.">
+  <meta name="author" content="">
+
+  <!-- site icons -->
+  <link rel="icon" href="/static/images/fevicon/fevicon.png" type="image/gif" />
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/responsive.css" />
+  <link rel="stylesheet" href="/static/css/colors1.css" />
+  <link rel="stylesheet" href="/static/css/custom.css" />
+  <link rel="stylesheet" href="/static/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/layers.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header_top {
+      background-color: #08561a;
+      color: #fff;
+    }
+
+    .header_container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .contact-info,
+    .social-login {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .separator {
+      width: 1px;
+      height: 15px;
+      background-color: #777;
+    }
+
+    .text-link-white-2 {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .text-link-white-2:hover {
+      color: #ccc;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 14px;
+      margin: 0 5px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ccc;
+    }
+
+    .header_bottom {
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+    }
+
+    .left_right_padding {
+      max-width: 1350px;
+      margin: 0 auto;
+      padding: 0 10px;
+      /* reduced padding */
+    }
+
+    .logo {
+      margin-right: 40px;
+      /* adds space between logo and menu */
+    }
+
+    .logo img {
+      width: 220px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .menu_side ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu_side ul li {
+      position: relative;
+    }
+
+    .menu_side ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .menu_side ul li a:hover {
+      color: #08561a;
+    }
+
+    .menu_side ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #08561a;
+      padding: 10px 0;
+      display: none;
+      min-width: 200px;
+      z-index: 999;
+    }
+
+    .menu_side ul li:hover>ul {
+      display: block;
+    }
+
+    .menu_side ul li ul li {
+      display: block;
+      padding: 5px 20px;
+    }
+
+    .menu_side ul li ul li a {
+      color: #fff !important;
+      font-weight: normal;
+    }
+
+    .menu_side ul li ul li a:hover {
+      color: #ccc !important;
+    }
+
+    .sub_menueBar {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: 1px;
+      display: none;
+      background-color: #08561a;
+    }
+
+    .menu_side ul li ul li:hover .sub_menueBar {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .header_container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu_side ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .menu_side ul li ul,
+      .sub_menueBar {
+        position: static;
+        display: none;
+      }
+
+      .menu_side ul li:hover>ul,
+      .menu_side ul li ul li:hover .sub_menueBar {
+        display: block;
+      }
+    }
+  </style>
+  <style>
+    /* =======================
+     POPUP STYLES
+  ========================== */
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .popup-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #0a2c16;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      color: #fff;
+      display: flex;
+    }
+
+    .popup-form h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .popup-form input[type="text"],
+    .popup-form input[type="tel"],
+    .popup-form input[type="email"],
+    .popup-form input[type="file"],
+    .popup-form input[type="date"],
+    .popup-form select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .popup-form button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width: calc(100% - 20px);
+    }
+
+    .popup-form button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .popup-image {
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    .popup-image img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .popup-image {
+        display: none;
+      }
+    }
+
+    /* =======================
+     BLINKING STYLES
+  ========================== */
+    .blink {
+      background-color: #165a2d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .blink:hover {
+      background-color: #0056b3;
+    }
+
+    .blink.blinking,
+    .blinking {
+      animation: blink 1s linear infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Header Top -->
+  <div class="header_top">
+    <div class="header_container">
+      <div class="contact-info">
+        <a href="tel:1234567890" class="text-link-white-2">Call Us +91 88612 15361</a>
+        <div class="separator"></div>
+        <a href="mailto:info@pragathiedu.com" class="text-link-white-2">info@pragathiedu.com</a>
+      </div>
+      <div class="social-login">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="separator"></div>
+        <a href="login.html" class="text-link-white-2">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Bottom -->
+  <div class="header_bottom">
+    <div class="left_right_padding">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <div class="logo">
+            <a href="index.html"><img src="/static/images/logos/pragathi_logo.png" alt="logo"></a>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+          <div class="menu_side">
+            <div id="navbar_menu">
+              <ul class="first-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a>
+                  <ul>
+                    <li><a href="behind-Us.html">Behind Us</a></li>
+                    <li><a href="vision-and-mission.html">Vision & Mission</a></li>
+                    <li><a href="Our-team.html">Our Team</a></li>
+                  </ul>
+                </li>
+                <li><a href="academic-Courses.html">Academic Courses</a>
+                  <ul>
+                    <li><a href="pu-commerce.html">PU Commerce</a></li>
+                    <li><a href="bcom.html">B.Com</a></li>
+                    <li><a href="ba-arts.html">BA - JMM</a></li>
+                    <li><a href="bca.html">BCA</a></li>
+                    <li><a href="bba-finance-and-marketing.html">BBA - Finance & Marketing</a></li>
+                    <li><a href="bsc-nursing.html">BSc Nursing</a></li>
+                    <li><a href="gnm-3years.html">GNM - 3 Years</a></li>
+                  </ul>
+                </li>
+                <li><a href="fees.html">Fees</a></li>
+                <li><a href="#">Special Tuition</a>
+                  <ul>
+                    <li><a href="#">CBSE ( 9 , 10 , 11 , 12) <span>➦</span></a>
+                      <ul class="sub_menueBar">
+                        <li><a href="tution.html">Mathematics</a></li>
+                        <li><a href="tution.html">Physics</a></li>
+                        <li><a href="tution.html">Chemistry</a></li>
+                        <li><a href="tution.html">Biology</a></li>
+                        <li><a href="tution.html">Computer Science</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">ICSE ( 9 , 10 , 11 , 12) <span>➦</span></a>
+                      <ul class="sub_menueBar">
+                        <li><a href="tution.html">Mathematics</a></li>
+                        <li><a href="tution.html">Physics</a></li>
+                        <li><a href="tution.html">Chemistry</a></li>
+                        <li><a href="tution.html">Biology</a></li>
+                        <li><a href="tution.html">Computer Science</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="nsdc.html">NSDC</a>
+                  <ul>
+                    <li><a href="aided-courses-PMYK.html">Aided Courses (PMYK)</a></li>
+                    <li><a href="unaided-courses.html">Unaided Courses</a></li>
+                  </ul>
+                </li>
+                <li><a href="add-on-program.html">Add on Program</a>
+                  <ul>
+                    <li><a href="skill-development-program.html">Skill Development Program</a></li>
+                    <li><a href="integrated-course.html">Integrated Course</a></li>
+                    <li><a href="educational-loan-assistance.html">Educational Loan assistance</a>
+                    </li>
+                    <li><a href="scholarship-and-sponsorship.html">Scholarship & Sponsorship</a>
+                    </li>
+                    <li><a href="placement-assistance.html">Placement Assistance</a></li>
+                  </ul>
+                </li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end header -->
+
+  <!-- section -->
+  <!-- inner page banner -->
+  <div id="inner_banner" class="section inner_banner_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="title-holder">
+              <div class="col-md-12">
+                <div class="full">
+                  <div class="title-holder">
+                    <div class="title-holder-cell text-left"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end inner page banner -->
+  <!-- section -->
+
+
+  <!-- section -->
+
+  <div class="section padding_layout_1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="main_heading text_align_center">
+              <h2 class="large" style="
+    font-family: poppins;
+">BA journalism</h2>
+              <p style="
+    line-break: 20px;
+    line-height: 38px;
+    font-family: 'Poppins';
+    font-weight: 500;
+">BA in Journalism and Mass Communication
+                BACHELOR OF Arts in Journalism
+                3 YEARS DEGREE COURSE
+                AFFILIATED WITH BANGALORE UNIVERSITY </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- table starts -->
+      <div class="col-md-12">
+        <div class="full margin_bottom_30">
+          <div class="accordion border_circle">
+            <div class="bs-example">
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i
+                          class="fa fa-group" aria-hidden="true"></i>Eligibility <i class="fa fa-angle-down"></i></a>
+                    </p>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p>12th or PUC PASS FROM ANY STREAM</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i
+                          class="fa fa-edit"></i>How to Apply<i class="fa fa-angle-down"></i></a> </p>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+
+                      <script defer>
+                        const blinkButton = document.getElementById('blinkButton');
+
+                        blinkButton.addEventListener('click', function () {
+                          blinkButton.classList.toggle('blinking');
+                        });
+                      </script>
+
+
+                      <p>
+                        <a style="font-weight:bold; color:#c29b50;" target="_blank"
+                          href="/static/images/Application form.pdf">Click here to download application form</a>
+                        and print on A4 sheet, fill out all the relevant fields without spelling mistakes, and sign.
+                        Then send the mail to
+                        <b><a href="mailto:admission@pragathiedu.com">admission@pragathiedu.com</a></b> along with the
+                        following documents:
+                      </p>
+
+                      <div style="float: left; width: 50%;">
+                        <ol>
+                          <li>Mark Sheet</li>
+                          <li>Transfer Certificate</li>
+                          <li>Contact Certificate</li>
+                          <li>Religious certificate in the case of SCST</li>
+                        </ol>
+                      </div>
+
+                      <div style="float: left; width: 50%;">
+                        <a id="blinkButton" class="blink" style="
+                            font-size: 20px;
+                            font-weight: 800;
+                            color:#fff;
+                            float: left;
+                            text-align: center;
+                            cursor: pointer;
+                        ">Enquiry Form</a>
+
+
+
+                        <!-- Blinking Button -->
+                        <button id="blinkButton" class="blink blinking">Book Admission</button>
+
+                        <!-- Popup HTML -->
+                        <div id="popup-container" class="popup-container">
+                          <div class="popup-form popup_window_box_sz">
+                            <button id="close-btn" style="
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+    ">&times;</button>
+
+                            <!--  Form Section -->
+                            <form id="subscription-form" enctype="multipart/form-data" style="flex: 1;">
+                              <h2 style="color:white">Book For Admission</h2>
+
+                              <input type="text" name="name" placeholder="Name of the Candidate" required>
+                              <input type="date" name="dob" required>
+                              <input type="tel" name="mobile" placeholder="Phone" required>
+                              <input type="email" name="email" placeholder="Email" required>
+                              <input type="text" name="medium" placeholder="Medium Studied" required>
+                              <input type="text" placeholder="Percentage" name="marks" required>
+
+                              <select name="course" required>
+                                <option value="" disabled selected>Select Preferred Course</option>
+                                <option value="B.com">B.com</option>
+                                <option value="BBA">BBA</option>
+                                <option value="BA jon">BA jon</option>
+                                <option value="BCA">BCA</option>
+                                <option value="GNM">GNM</option>
+                              </select>
+
+                              <input type="text" name="district" placeholder="District" required>
+                              <input type="text" name="state" placeholder="State" required>
+                              <input type="file" name="marksheet[]" accept="application/pdf" multiple required>
+
+                              <button type="submit">Submit</button>
+                            </form>
+
+                            <!-- Bootstrap Feedback Modal -->
+                            <div class="modal fade" id="feedbackModal" tabindex="-1"
+                              aria-labelledby="feedbackModalTitle" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="feedbackModalTitle"></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body"></div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="okBtn">OK</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <script>
+                          document.addEventListener("DOMContentLoaded", function () {
+                            const params = new URLSearchParams(window.location.search);
+                            const status = params.get('status');
+                            const message = params.get('message');
+
+                            if (status && message) {
+                              document.getElementById('feedbackModalTitle').textContent = status === 'success' ? "✅ Success!" : "❌ Error!";
+                              document.querySelector('#feedbackModal .modal-body').innerHTML = decodeURIComponent(message);
+
+                              const modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+                              modal.show();
+
+                              document.getElementById("okBtn").addEventListener("click", function () {
+                                modal.hide();
+                                setTimeout(() => {
+                                  window.location.href = "bca.html";
+                                }, 500);
+                              });
+                            }
+
+                            const popup = document.getElementById("popup-container");
+                            const blinkButton = document.getElementById("blinkButton");
+                            const closeBtn = document.getElementById("close-btn");
+                            const applyOnlineBtn = document.getElementById("applyOnlineBtn");
+
+                            function openPopup() {
+                              if (popup) popup.style.display = "block";
+                            }
+
+                            function closePopup() {
+                              if (popup) popup.style.display = "none";
+                            }
+
+                            if (blinkButton) blinkButton.addEventListener("click", openPopup);
+                            if (closeBtn) closeBtn.addEventListener("click", closePopup);
+                            if (applyOnlineBtn) applyOnlineBtn.addEventListener("click", function (e) {
+                              e.preventDefault();
+                              openPopup();
+                            });
+
+                            setTimeout(openPopup, 180000); // Show popup after 3 minutes
+
+                            // ✅ Fetch form submission
+                            const form = document.getElementById("subscription-form");
+                            if (form) {
+                              form.addEventListener("submit", function (e) {
+                                e.preventDefault();
+
+                                const formData = new FormData(form);
+
+                                fetch("/api/admissions/", {
+                                  method: "POST",
+                                  body: formData
+                                })
+                                  .then(response => {
+                                    if (!response.ok) {
+                                      return response.json().then(data => {
+                                        throw new Error(data.detail || "Something went wrong");
+                                      });
+                                    }
+                                    return response.json();
+                                  })
+                                  .then(data => {
+                                    document.getElementById('feedbackModalTitle').textContent = "✅ Success!";
+                                    document.querySelector('#feedbackModal .modal-body').innerHTML = "Form submitted successfully!";
+                                    const modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+                                    modal.show();
+                                  })
+                                  .catch(error => {
+                                    document.getElementById('feedbackModalTitle').textContent = "❌ Error!";
+                                    document.querySelector('#feedbackModal .modal-body').innerHTML = error.message;
+                                    const modal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+                                    modal.show();
+                                  });
+                              });
+                            }
+                          });
+                        </script>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix"><i
+                          class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Brouchers <i
+                          class="fa fa-angle-down"></i></a> </p>
+                  </div>
+                  <div id="collapsesix" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p>
+
+
+                      <p class="blinking-text" style="
+    font-size: 20px;
+    font-weight: 800;
+    font-family: system-ui;
+">Know More about the BA JOURNALISM course details <br> <br> <br>
+                      </p>
+
+                      <button class="blinking" style="
+    height: 44px;
+    width: 154px;
+    background-color: #165a2d;
+    color: #fff;
+    font-size: 20px;" onclick="openPDF()"> Click here!!!</button> </p>
+                      <script>
+                        function openPDF() {
+                          window.open('images/BAJ_ Final_.pdf');
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i
+                          class="fa fa-book"></i>Sylabus<i class="fa fa-angle-down"></i></a> </p>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p><b>Subject:</b><br />
+                        a) Accounting and Taxation.<br />
+                        b) Finance.<br />
+                        c) Business information and Technology.<br />
+                        d) Banking and Insurance.<br /><br />
+
+                        <b>Language:</b><br />
+                        I : English <br />
+                        II: Kannada /Hindi<br /><br />
+                        <b><a href="/static/images/sylabus/ba-arts.pdf" target="_blank">(Download Detailed
+                            sylabus)</a></b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><i
+                          class="fa fa-laptop"></i>Training with Stipend<i class="fa fa-angle-down"></i></a> </p>
+                  </div>
+                  <div class="panel-body">
+                    <p><img class="img-fluid" src="/static/images/it_service/ba.png" width="900" height="321" alt="bba">
+                    </p>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><i
+                            class="fa fa-language"></i>Activities in course period<i class="fa fa-angle-down"></i></a>
+                      </p>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p><img class="img-fluid" src="/static/images/baj.png" width="900" height="321" alt="pu arts">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion"
+                          href="#collapseSeven"><i class="fa fa-money"></i>Scope for Outcomes<i
+                            class="fa fa-angle-down"></i></a> </p>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p style="font-weight:bold;"><i class="fa fa-check-circle"></i> Student who qualified UPSC
+                          Preliminary exam can join for Civil service<br /><br />
+                          <i class="fa fa-check-circle"></i>Student who qualifying PSC or SSC Test , they can joint for
+                          govt. Job
+                          <br /><br />
+                          <i class="fa fa-check-circle"></i>Gaurenteed Placement with 2.5 to 3 Lakhs PA through Campus
+                          Interview <br /><br />
+                          <i class="fa fa-check-circle"></i>Student can continue for PG with part time work in skilled
+                          area <br /><br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- InstanceEndEditable -->
+
+  <div class="section padding_layout_1 testmonial_section white_fonts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="main_heading text_align_left">
+              <h2 style="text-transform: none;">Students Talk</h2>
+              <p class="large">Here are testimonials from students..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="full">
+            <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                <li data-target="#testimonial_slider" data-slide-to="2"></li>
+              </ul>
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content">The college campus includes fully functional laboratories, huge
+                      lecture halls, auditorium, canteen, multipurpose ground, badminton court, library, reading room
+                      and indoor games room</div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client1.jpg"
+                        class="img-responsive" alt="#" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Garima</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content"> Good experienced faculty that help students whenever required.The
+                      equipments are good and functional . The clinical experience is quite good as well.</div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client2.jpg"
+                        class="img-responsive" alt="#" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Vijay Joseph</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content">My campus life was very very good. Me and my friends are enjoyed
+                      very much in the campus of our college. It was my best memories. My teachers are very kind &
+                      supportive to me and every other students. </div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client3.jpg"
+                        class="img-responsive" alt="#" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Priya Gopal</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="full"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- section -->
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="contact_us_section">
+              <div class="call_icon"> <img src="/static/images/it_service/phone_icon.png" alt="#" /> </div>
+              <div class="inner_cont">
+                <h2>CONTACT FOR ADMISSION<br />8861215361, 8287600521</h2>
+
+              </div>
+              <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Download
+                  Prospectors</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- section -->
+  <div class="section padding_layout_1" style="padding:10px 0;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- Modal -->
+  <div class="modal fade" id="search_bar" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
+              <div class="navbar-search">
+                <form action="#" method="get" id="search-global-form" class="search-global">
+                  <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value=""
+                    class="search-global__input">
+                  <button class="search-global__btn"><i class="fa fa-search"></i></button>
+                  <div class="search-global__note">Begin typing your search above and press return to search.</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Model search bar -->
+  <!-- footer -->
+  <footer class="footer_style_2">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Column 1: Logo and Social Media -->
+        <div class="col-md-3 text-center mb-4">
+          <img src="/static/images/logos/logo2.png" alt="Logo" style="height: 125px;">
+          <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Academic Courses -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>ACADEMIC COURSES</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="pu-arts.html"><i class="fa fa-angle-right"></i>PU Arts</a></li>
+            <li><a href="pu-commerce.html"><i class="fa fa-angle-right"></i>PU Commerce</a></li>
+            <li><a href="bcom.html"><i class="fa fa-angle-right"></i>B.Com</a></li>
+            <li><a href="ba-arts.html"><i class="fa fa-angle-right"></i>BA Arts</a></li>
+            <li><a href="bca.html"><i class="fa fa-angle-right"></i>BCA</a></li>
+            <li><a href="bba-finance-and-marketing.html"><i class="fa fa-angle-right"></i>BBA- Finance & Marketing</a>
+            </li>
+            <li><a href="bsc-nursing.html"><i class="fa fa-angle-right"></i>BSc Nursing</a></li>
+            <li><a href="gnm-3years.html"><i class="fa fa-angle-right"></i>GNM - 3 Years</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Additional Links -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>ADDITIONAL LINKS</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a></li>
+            <li><a href="facility.html"><i class="fa fa-angle-right"></i>Facility</a></li>
+            <li><a href="nsdc.html"><i class="fa fa-angle-right"></i>NSDC</a></li>
+            <li><a href="gallery.html"><i class="fa fa-angle-right"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact and Add-On Programs -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>Contact Us</h2>
+          </div>
+          <p>
+            # 57, Pragathi Group, Dr. S. Radha Krishnan Road,<br>
+            Chikkabanavara, Bangalore, Karnataka - 560090<br>
+            <span style="font-size:18px;"><a href="tel:+8861215361">+8861215361</a></span>
+          </p>
+          <p>
+            <a href="https://www.google.com/maps?q=13.0805,77.4946" target="_blank">
+              <i class="fa fa-map-marker"></i> View Location on Map
+            </a>
+          </p>
+          <div class="main-heading left_text mt-4">
+            <h2>Add on Program</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="skill-development-program.html"><i class="fa fa-angle-right"></i>Skill
+                Development and Integrated Course</a></li>
+            <li><a href="educational-loan-assistance.html"><i class="fa fa-angle-right"></i>Educational Loan
+                Assistance</a></li>
+            <li><a href="Scholarship-and-sponsorship.html"><i class="fa fa-angle-right"></i>Scholarship &
+                Sponsorship</a></li>
+            <li><a href="placement-assistance.html"><i class="fa fa-angle-right"></i>Placement Assistance</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="cprt text-center mt-4">
+        <p>Pragathi Group Of Institution &copy; Copyrights 2020</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- end footer -->
+  <!-- jQuery first -->
+  <script src="/static/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/static/js/bootstrap.min.js"></script>
+
+  <!-- Menu -->
+  <script src="/static/js/menumaker.js"></script>
+
+  <!-- WOW.js Animation -->
+  <script src="/static/js/wow.js"></script>
+
+  <!-- Revolution Slider Core JS -->
+  <script src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- Revolution Slider Extensions -->
+  <script src="/static/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="/static/js/custom.js"></script>
+
+
+</body>
+<!-- InstanceEnd -->
+
+</html>

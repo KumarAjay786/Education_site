@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="/static/images/fevicon/fevicon.png" type="image/gif" />
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e4e4ec, #d1daf3);
+            overflow-x: hidden;
+            color: #e6e6e6;
+        }
+
+        #sidebar {
+            width: 280px;
+            background: #0e5700;
+            height: 100vh;
+            position: fixed;
+            z-index: 1000;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            background: #24890a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            padding: 0.75rem 1.5rem !important;
+            margin: 0.25rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #fff !important;
+            transform: translateX(4px);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(45deg, #e94560, #d32f2f);
+            color: #fff !important;
+            box-shadow: 0 4px 6px rgba(233, 69, 96, 0.3);
+        }
+
+        #content {
+            margin-left: 280px;
+            min-height: 100vh;
+            transition: margin 0.3s;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(45deg, #1b7e31, #1a1a2e);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .search-bar {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .search-bar::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .data-table {
+            background: rgba(15, 52, 96, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table.dataTable thead th {
+            background: rgba(10, 30, 60, 0.9) !important;
+            color: #fff !important;
+
+            font-weight: 600;
+            padding: 1rem 1.5rem !important;
+            border-bottom: 2px solid rgba(233, 69, 96, 0.5) !important;
+        }
+
+        table.dataTable tbody td {
+            color: #000000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        table.dataTable tbody tr:hover {
+            background-color: rgb(120, 168, 226) !important;
+        }
+
+        .card {
+            background: transparent;
+            border: none;
+        }
+
+        .btn-success {
+            background: linear-gradient(45deg, #00b894, #009d71);
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #0984e3, #0652a0);
+            border: none;
+        }
+
+        .btn-danger {
+            background: linear-gradient(45deg, #e94560, #d32f2f);
+            border: none;
+        }
+
+        .modal-content {
+            background: #1a1a2e;
+            color: #e6e6e6;
+            border: 1px solid rgba(233, 69, 96, 0.5);
+        }
+
+        .modal-header {
+            background: linear-gradient(45deg, #0f3460, #1a1a2e);
+            border-bottom: 1px solid rgba(233, 69, 96, 0.5);
+        }
+
+        .table-striped>tbody>tr:nth-child(odd)>td,
+        .table-striped>tbody>tr:nth-child(odd)>th {
+            background-color: rgba(135, 189, 222, 0.3);
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid rgba(169, 188, 229, 0.385);
+        }
+
+        .bg-light {
+            background-color: rgba(10, 30, 60, 0.9) !important;
+            color: white !important;
+        }
+
+        #toggleSidebar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1050;
+            background: rgba(233, 69, 96, 0.8);
+            border: none;
+            display: none;
+        }
+
+        .stats-card {
+            background: rgba(15, 52, 96, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            background: none;
+        }
+
+        .stats-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 10px;
+        }
+
+        .chart-container {
+            background: rgba(15, 52, 96, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 992px) {
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+            #sidebar.active {
+                transform: translateX(0);
+            }
+
+            #content {
+                margin-left: 0;
+            }
+
+            #toggleSidebar {
+                display: block;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .mb-3 {
+            width: 243px
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleSidebar" class="btn btn-danger">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="d-flex" id="viewport">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="text-white p-3">
+            <div>
+                <div class="sidebar-header d-flex align-items-center mb-4">
+                    <!-- <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Admin"> -->
+                    <div>
+                        <h4 class="mb-0">Admin Dashboard</h4>
+
+                    </div>
+                </div>
+                <ul class="nav flex-column gap-2">
+                    <li><a href="#" class="nav-link text-white active" data-type="addmission">
+                            <i class="fa fa-table me-2"></i>addmission Application</a></li>
+                    <li><a href="#" class="nav-link text-white" data-type="career">
+                            <i class="fa fa-chart-bar me-2"></i>career Application</a></li>
+                    <li><a href="#" class="nav-link text-white" data-type="tution">
+                            <i class="fa fa-users me-2"></i>tution Application</a></li>
+                    <li><a href="#" class="nav-link text-white" data-type="contact">
+                            <i class="fa fa-users me-2"></i>contact Application</a></li>
+                    <li><a href="#" class="nav-link text-white" data-type="analytics">
+                            <i class="fa fa-chart-line me-2"></i>Analytics</a></li>
+                </ul>
+            </div>
+            <div class="p-3">
+                <a href="#" class="btn btn-danger w-100">
+                    <i class="fa fa-sign-out-alt me-2"></i>Logout
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="content" class="flex-grow-1">
+            <div class="container-fluid p-4">
+                <div class="dashboard-header">
+                    <h2 class="h4 mb-0"><i class="fas fa-tachometer-alt me-2"></i>Dashboard Overview</h2>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="text" class="form-control search-bar" id="customSearch"
+                            placeholder="Search applications...">
+                        <button class="btn btn-success" id="download-excel-btn" title="Download as Excel">
+                            <i class="fa fa-file-excel me-1"></i>Excel
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards - Hidden by default, shown on analytics page -->
+                <div id="statsContainer" class="row mb-5" style="display: none;">
+                    <div class="col-md-3 mb-3">
+                        <div class="stats-card">
+                            <div class="stats-number" id="totalApplications">0</div>
+                            <div class="stats-label">Total Applications</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stats-card">
+                            <div class="stats-number" id="AddmissionApplications">0</div>
+                            <div class="stats-label">Addmission Applications</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stats-card">
+                            <div class="stats-number" id="careerApplications">0</div>
+                            <div class="stats-label">career Applications</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stats-card">
+                            <div class="stats-number" id="TutionApplications">0</div>
+                            <div class="stats-label">Tution Applications</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <div class="stats-card">
+                            <div class="stats-number" id="ContactApplications">0</div>
+                            <div class="stats-label">Contact Applications</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Chart Container - Hidden by default, shown on analytics page -->
+                <div id="chartContainer" class="chart-container" style="display: none;">
+                    <h5><i class="fas fa-chart-bar me-2"></i>Applications Overview</h5>
+                    <canvas id="applicationsChart" height="125"></canvas>
+                </div>
+
+                <!-- Data Table -->
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table id="data-table" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+
+                                        <th>Date</th>
+                                        <th>action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content will be rendered here by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for viewing application details -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Application Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalDetailsBody" style="font-size:1.1rem;"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Superuser-only access check
+        (function () {
+            const token = localStorage.getItem("access_token");
+            if (!token) {
+                window.location.href = "/login.html";
+                return;
+            }
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const payload = JSON.parse(decodeURIComponent(escape(window.atob(base64))));
+                if (!payload.is_superuser) {
+                    localStorage.clear();
+                    window.location.href = "/login.html";
+                }
+            } catch (e) {
+                localStorage.clear();
+                window.location.href = "/login.html";
+            }
+        })();
+
+        const $table = $('#data-table').DataTable({
+            dom: 'rtip', // Remove default length and search bar, keep table, info, pagination
+        });
+
+        // Custom search bar functionality
+        $('#customSearch').on('keyup', function () {
+            $table.search(this.value).draw();
+        });
+        let currentSection = 'addmission';
+
+        const API_HEADERS = {
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
+                "Content-Type": "application/json"
+            }
+        };
+
+        // Load Addmission Applications
+        function loadaddmissionApplications() {
+            currentSection = 'addmission';
+            fetch('/api/admissions/', API_HEADERS)
+                .then(res => res.json())
+                .then(data => {
+                    updateTable(data, 'addmission');
+                })
+                .catch(err => console.error("Addmission Applications Error:", err));
+        }
+
+        // Load Career Applications
+        function loadcareerApplications() {
+            currentSection = 'career';
+            fetch('/api/careers/', API_HEADERS)
+                .then(res => res.json())
+                .then(data => {
+                    updateTable(data, 'career');
+                })
+                .catch(err => console.error("Career Applications Error:", err));
+        }
+
+        // Load Tution Applications
+        function loadtutionApplications() {
+            currentSection = 'tution';
+            fetch('/api/tuition-admissions/', API_HEADERS)
+                .then(res => res.json())
+                .then(data => {
+                    updateTable(data, 'tution');
+                })
+                .catch(err => console.error("Tution Applications Error:", err));
+        }
+
+        // Load Contact Applications
+        function loadcontactApplications() {
+            currentSection = 'contact';
+            fetch('/api/contact/', API_HEADERS)
+                .then(res => res.json())
+                .then(data => {
+                    updateTable(data, 'contact');
+                })
+                .catch(err => console.error("Contact Applications Error:", err));
+        }
+
+        // Update DataTable
+        function updateTable(data, type) {
+            $table.clear();
+            if (!Array.isArray(data)) {
+                // If not an array, likely an error (401/403)
+                alert("Session expired or unauthorized. Please log in again.");
+                localStorage.clear();
+                window.location.href = "/login.html";
+                return;
+            }
+            data.forEach(item => {
+                const name = item.name || item.full_name || item.firstname || '—';
+                const email = item.email || '—';
+                const date = item.date_joined || item.submitted_at || item.created_at || '—';
+                const actions = `
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-primary" onclick='viewDetails("${type}", \`${encodeURIComponent(JSON.stringify(item))}\`)'><i class="fa fa-eye"></i></button>
+            <button class="btn btn-danger" onclick="deleteItem('${type}', ${item.id})"><i class="fa fa-trash"></i></button>
+        </div>`;
+                $table.row.add([
+                    item.id,
+                    name,
+                    email,
+                    formatDate(date),
+                    actions
+                ]);
+            });
+            $table.draw();
+        }
+
+        // View Modal Details
+        function viewDetails(type, encodedJson) {
+            const item = JSON.parse(decodeURIComponent(encodedJson));
+            let html = `<ul class="list-group">`;
+
+            Object.entries(item).forEach(([key, value]) => {
+                html += `<li class="list-group-item bg-transparent border-light d-flex justify-content-between text-white">
+                        <strong>${key}</strong>
+                        <span>${value ?? '—'}</span>
+                    </li>`;
+            });
+
+            html += `</ul>`;
+            $('#modalDetailsBody').html(html);
+            $('#detailsModal').modal('show');
+        }
+
+        // Format Date
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return isNaN(d) ? '—' : d.toLocaleDateString() + ' ' + d.toLocaleTimeString();
+        }
+
+        // Status update
+        function updateStatus(type, id, status) {
+            const url = getEndpoint(type, id);
+            if (!url) return;
+
+            fetch(url, {
+                method: 'PUT',
+                headers: API_HEADERS.headers,
+                body: JSON.stringify({ status })
+            })
+                .then(res => res.json())
+                .then(() => {
+                    alert(`Status updated to ${status}`);
+                    reloadCurrentSection();
+                })
+                .catch(err => console.error(`Failed to update status for ${type} #${id}`, err));
+        }
+
+        // Delete
+        function deleteItem(type, id) {
+            if (!confirm("Are you sure you want to delete this record?")) return;
+            const url = getEndpoint(type, id);
+            if (!url) return;
+
+            fetch(url, {
+                method: 'DELETE',
+                headers: API_HEADERS.headers
+            })
+                .then(res => {
+                    if (res.status === 401 || res.status === 403) {
+                        alert("Session expired or unauthorized. Please log in again.");
+                        localStorage.clear();
+                        window.location.href = "/login.html";
+                        return;
+                    }
+                    if (res.status === 204) {
+                        alert("Deleted successfully.");
+                        reloadCurrentSection();
+                    } else if (res.ok) {
+                        // Some APIs may return 200/201 for delete, treat as success
+                        alert("Deleted successfully.");
+                        reloadCurrentSection();
+                    } else {
+                        // Do not redirect to login for other errors
+                        alert("Failed to delete. Status: " + res.status);
+                        res.text().then(text => console.log('Delete error response:', text));
+                    }
+                })
+                .catch(err => console.error(`Failed to delete ${type} #${id}`, err));
+        }
+
+        // Resolve endpoint
+        function getEndpoint(type, id) {
+            if (type === 'addmission') return `/api/admissions/${id}/`;
+            if (type === 'career') return `/api/careers/${id}/`;
+            if (type === 'tution') return `/api/tuition-admissions/${id}/`;
+            if (type === 'contact') return `/api/contact/${id}/`;
+            return null;
+        }
+
+        // Reload current tab
+        function reloadCurrentSection() {
+            if (currentSection === 'addmission') loadaddmissionApplications();
+            else if (currentSection === 'career') loadcareerApplications();
+            else if (currentSection === 'tution') loadtutionApplications();
+            else if (currentSection === 'contact') loadcontactApplications();
+        }
+
+        // Fetch and update stats
+        let applicationsChart = null;
+        function updateStats() {
+            Promise.all([
+                fetch('/api/admissions/', API_HEADERS).then(res => res.json()),
+                fetch('/api/careers/', API_HEADERS).then(res => res.json()),
+                fetch('/api/tuition-admissions/', API_HEADERS).then(res => res.json()),
+                fetch('/api/contact/', API_HEADERS).then(res => res.json()),
+            ]).then(([admissions, careers, tuitions, contacts]) => {
+                const total = admissions.length + careers.length + tuitions.length + contacts.length;
+                // Update all stats cards with the number of applications
+                document.getElementById('totalApplications').textContent = total;
+                document.getElementById('AddmissionApplications').textContent = admissions.length;
+                document.getElementById('careerApplications').textContent = careers.length;
+                document.getElementById('TutionApplications').textContent = tuitions.length;
+                document.getElementById('ContactApplications').textContent = contacts.length;
+
+                // Chart.js - Applications Overview
+                const ctx = document.getElementById('applicationsChart').getContext('2d');
+                const chartData = {
+                    labels: ['Admission', 'Career', 'Tuition', 'Contact'],
+                    datasets: [{
+                        label: 'Applications',
+                        data: [admissions.length, careers.length, tuitions.length, contacts.length],
+                        backgroundColor: [
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(52, 152, 219, 0.7)',
+                            'rgba(241, 196, 15, 0.7)',
+                            'rgba(231, 76, 60, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(39, 174, 96, 1)',
+                            'rgba(41, 128, 185, 1)',
+                            'rgba(243, 156, 18, 1)',
+                            'rgba(192, 57, 43, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                };
+                if (applicationsChart) {
+                    applicationsChart.data = chartData;
+                    applicationsChart.update();
+                } else {
+                    applicationsChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: chartData,
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: { display: false },
+                                title: {
+                                    display: true,
+                                    text: 'Applications Overview',
+                                    color: '#fff',
+                                    font: { size: 18 }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    ticks: { color: '#fff' },
+                                    grid: { color: 'rgba(255,255,255,0.1)' }
+                                },
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: { color: '#fff' },
+                                    grid: { color: 'rgba(255,255,255,0.1)' }
+                                }
+                            }
+                        }
+                    });
+                }
+            }).catch(err => {
+                console.error('Failed to fetch stats:', err);
+            });
+        }
+
+        // Show/hide analytics
+        function showAnalytics() {
+            $('#statsContainer, #chartContainer').show();
+            updateStats();
+        }
+
+        function hideAnalytics() {
+            $('#statsContainer, #chartContainer').hide();
+        }
+
+        // Sidebar Navigation
+        $(document).on('click', '.nav-link', function (e) {
+            e.preventDefault();
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+
+            const type = $(this).data('type');
+            currentSection = type;
+
+            if (type === 'addmission') {
+                hideAnalytics();
+                loadaddmissionApplications();
+            } else if (type === 'career') {
+                hideAnalytics();
+                loadcareerApplications();
+            } else if (type === 'tution') {
+                hideAnalytics();
+                loadtutionApplications();
+            } else if (type === 'contact') {
+                hideAnalytics();
+                loadcontactApplications();
+            } else if (type === 'analytics') {
+                showAnalytics();
+            }
+        });
+
+        // Logout
+        $(document).on('click', '.btn-danger', function (e) {
+            e.preventDefault();
+            localStorage.clear();
+            window.location.href = "/login.html";
+        });
+
+        // Initial load
+        loadaddmissionApplications();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>About PRAGATHI GROUP OF INSTITUTIONS | College & Tuition Services</title>
+  <meta name="keywords" content="">
+  <meta name="description"
+    content="PRAGATHI GROUP OF INSTITUTIONS is a premier college offering quality education and specialized tuition services. We are dedicated to shaping bright futures with expert guidance, personalized learning, and a focus on academic excellence.">
+  <meta name="author" content="">
+
+  <!-- site icons -->
+  <link rel="icon" href="/static/images/fevicon/fevicon.png" type="image/gif" />
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/responsive.css" />
+  <link rel="stylesheet" href="/static/css/colors1.css" />
+  <link rel="stylesheet" href="/static/css/custom.css" />
+  <link rel="stylesheet" href="/static/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/layers.css" />
+  <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header_top {
+      background-color: #08561a;
+      color: #fff;
+    }
+
+    .header_container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .contact-info,
+    .social-login {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .separator {
+      width: 1px;
+      height: 15px;
+      background-color: #777;
+    }
+
+    .text-link-white-2 {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .text-link-white-2:hover {
+      color: #ccc;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 14px;
+      margin: 0 5px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ccc;
+    }
+
+    .header_bottom {
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+    }
+
+    .left_right_padding {
+      max-width: 1350px;
+      margin: 0 auto;
+      padding: 0 10px;
+      /* reduced padding */
+    }
+
+    .logo {
+      margin-right: 40px;
+      /* adds space between logo and menu */
+    }
+
+    .logo img {
+      width: 220px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .menu_side ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu_side ul li {
+      position: relative;
+    }
+
+    .menu_side ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .menu_side ul li a:hover {
+      color: #08561a;
+    }
+
+    .menu_side ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #08561a;
+      padding: 10px 0;
+      display: none;
+      min-width: 200px;
+      z-index: 999;
+    }
+
+    .menu_side ul li:hover>ul {
+      display: block;
+    }
+
+    .menu_side ul li ul li {
+      display: block;
+      padding: 5px 20px;
+    }
+
+    .menu_side ul li ul li a {
+      color: #fff !important;
+      font-weight: normal;
+    }
+
+    .menu_side ul li ul li a:hover {
+      color: #ccc !important;
+    }
+
+    .sub_menueBar {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: 1px;
+      display: none;
+      background-color: #08561a;
+    }
+
+    .menu_side ul li ul li:hover .sub_menueBar {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .header_container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu_side ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .menu_side ul li ul,
+      .sub_menueBar {
+        position: static;
+        display: none;
+      }
+
+      .menu_side ul li:hover>ul,
+      .menu_side ul li ul li:hover .sub_menueBar {
+        display: block;
+      }
+    }
+
+    /* ================== General Form Styles ================== */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #15592d;
+      border-radius: 10px;
+      box-shadow: none;
+      font-family: system-ui;
+      color: #fff;
+      border: none;
+    }
+
+    .form-container h2 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .form-container label {
+      font-weight: bold;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="date"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container input[type="number"],
+    .form-container input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-container button[type="submit"],
+    .form-container button[type="button"],
+    .btn {
+      width: 10%;
+      background-color: #15592d;
+      color: white;
+      padding: 2px 20px;
+      margin: 8px 40px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-container button[type="submit"]:hover,
+    .form-container button[type="button"]:hover,
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .cancel {
+      background-color: #f44336;
+      color: white;
+      margin-left: 15px;
+    }
+
+    .cancel:hover {
+      background-color: #da190b;
+    }
+
+    /* ================== Floating Button Styles ================== */
+    .float-button {
+      position: fixed;
+      bottom: 150px;
+      left: -3px;
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 4%;
+      cursor: pointer;
+      z-index: 99;
+    }
+
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* ================== Form Popup Styles ================== */
+    .form-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: none;
+      z-index: 9999;
+      width: 500px;
+      max-width: 90%;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: none;
+      position: fixed;
+      max-height: 90vh;
+      overflow-y: auto;
+      /* Centered and no border/shadow */
+    }
+
+    /* Row Styling */
+    .row-flex {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .row-flex input,
+    .row-flex select {
+      flex: 1;
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      text-align: center;
+      box-shadow: 0 0 5px #00000080;
+      z-index: 10000;
+    }
+
+    .close-btn:hover {
+      background: darkred;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+
+    /* ================== Call Button Styles ================== */
+    .call-buton .cc-calto-action-ripple {
+      z-index: 99999;
+      position: fixed;
+      right: 3rem;
+      bottom: 1rem;
+      background: #ec8b00;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      border-radius: 100%;
+      box-sizing: border-box;
+      color: #ffffff;
+      animation: cc-calto-action-ripple 0.6s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .call-buton .cc-calto-action-ripple i {
+      transition: 0.3s ease;
+      font-size: 2.2rem;
+    }
+
+    .call-buton .cc-calto-action-ripple:hover i {
+      transform: rotate(135deg);
+    }
+
+    @keyframes cc-calto-action-ripple {
+      0% {
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2),
+          0 0 0 0 rgba(236, 139, 0, 0.2),
+          0 0 0 5px rgba(236, 139, 0, 0.2),
+          0 0 0 10px rgba(236, 139, 0, 0.2);
+      }
+
+      100% {
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2),
+          0 0 0 5px rgba(236, 139, 0, 0.2),
+          0 0 0 10px rgba(236, 139, 0, 0.2),
+          0 0 0 20px rgba(236, 139, 0, 0);
+      }
+    }
+
+    span.num {
+      position: absolute;
+      color: #ec8b00;
+      left: -30%;
+      bottom: -50%;
+    }
+
+    /* ================== WhatsApp Floating Button ================== */
+    a {
+      text-decoration: none;
+    }
+
+    .floating_btn {
+      position: fixed;
+      bottom: 72px;
+      right: 30px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .contact_icon {
+      background-color: #21b658;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 2px 2px 3px #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+      font-weight: normal;
+      font-family: sans-serif;
+      transition: all 300ms ease-in-out;
+
+    }
+
+    @keyframes pulsing {
+      to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+      }
+    }
+
+    .text_icon {
+      margin-top: 8px;
+      color: #707070;
+      font-size: 13px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Header Top -->
+  <div class="header_top">
+    <div class="header_container">
+      <div class="contact-info">
+        <a href="tel:1234567890" class="text-link-white-2">Call Us +91 88612 15361</a>
+        <div class="separator"></div>
+        <a href="mailto:info@pragathiedu.com" class="text-link-white-2">info@pragathiedu.com</a>
+      </div>
+      <div class="social-login">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="separator"></div>
+        <a href="login.html" class="text-link-white-2">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Bottom -->
+  <div class="header_bottom">
+    <div class="left_right_padding">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <div class="logo">
+            <a href="index.html"><img src="/static/images/logos/pragathi_logo.png" alt="logo"></a>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+          <div class="menu_side">
+            <div id="navbar_menu">
+              <ul class="first-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a>
+                  <ul>
+                    <li><a href="behind-Us.html">Behind Us</a></li>
+                    <li><a href="vision-and-mission.html">Vision & Mission</a></li>
+                    <li><a href="Our-team.html">Our Team</a></li>
+                  </ul>
+                </li>
+                <li><a href="academic-Courses.html">Academic Courses</a>
+                  <ul>
+                    <li><a href="pu-commerce.html">PU Commerce</a></li>
+                    <li><a href="bcom.html">B.Com</a></li>
+                    <li><a href="ba-arts.html">BA - JMM</a></li>
+                    <li><a href="bca.html">BCA</a></li>
+                    <li><a href="bba-finance-and-marketing.html">BBA - Finance & Marketing</a></li>
+                    <li><a href="bsc-nursing.html">BSc Nursing</a></li>
+                    <li><a href="gnm-3years.html">GNM - 3 Years</a></li>
+                  </ul>
+                </li>
+                <li><a href="fees.html">Fees</a></li>
+                <li><a href="#">Special Tuition</a>
+                  <ul>
+                    <li><a href="#">CBSE ( 9 , 10 , 11 , 12) <span>➦</span></a>
+                      <ul class="sub_menueBar">
+                        <li><a href="tution.html">Mathematics</a></li>
+                        <li><a href="tution.html">Physics</a></li>
+                        <li><a href="tution.html">Chemistry</a></li>
+                        <li><a href="tution.html">Biology</a></li>
+                        <li><a href="tution.html">Computer Science</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">ICSE ( 9 , 10 , 11 , 12) <span>➦</span></a>
+                      <ul class="sub_menueBar">
+                        <li><a href="tution.html">Mathematics</a></li>
+                        <li><a href="tution.html">Physics</a></li>
+                        <li><a href="tution.html">Chemistry</a></li>
+                        <li><a href="tution.html">Biology</a></li>
+                        <li><a href="tution.html">Computer Science</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="nsdc.html">NSDC</a>
+                  <ul>
+                    <li><a href="aided-courses-PMYK.html">Aided Courses (PMYK)</a></li>
+                    <li><a href="unaided-courses.html">Unaided Courses</a></li>
+                  </ul>
+                </li>
+                <li><a href="add-on-program.html">Add on Program</a>
+                  <ul>
+                    <li><a href="skill-development-program.html">Skill Development Program</a></li>
+                    <li><a href="integrated-course.html">Integrated Course</a></li>
+                    <li><a href="educational-loan-assistance.html">Educational Loan assistance</a>
+                    </li>
+                    <li><a href="scholarship-and-sponsorship.html">Scholarship & Sponsorship</a>
+                    </li>
+                    <li><a href="placement-assistance.html">Placement Assistance</a></li>
+                  </ul>
+                </li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end header -->
+
+  <!-- section -->
+  <div id="slider" class="section main_slider">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+          data-alias="classicslider1"
+          style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+
+          <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+            <ul>
+              <!-- Slide 1 -->
+              <li data-index="rs-1812" data-transition="zoomin" data-thumb="/static/images/it_service/slide1-A.jpg"
+                data-title="To Educate">
+                <img src="/static/images/it_service/slide1-A.jpg" class="rev-slidebg" alt="slider" data-no-retina>
+
+                <!-- Overlay -->
+                <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0" data-x="center" data-y="middle"
+                  data-width="full" data-height="full" data-transform_idle="o:1;"
+                  data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="s:300;s:300;"
+                  data-start="750" style="z-index: 5;background-color:rgba(0, 0, 0, 0.25);"> </div>
+
+                <!-- Title -->
+                <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" data-x="center" data-y="middle"
+                  data-voffset="0" data-fontsize="70" data-lineheight="70" data-transform_idle="o:1;"
+                  data-transform_in="y:[-100%];s:2000;e:Power4.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-start="1000" style="z-index: 6;">To
+                  Educate</div>
+
+                <!-- Subtitle -->
+                <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" data-x="center"
+                  data-y="middle" data-voffset="52" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];s:2000;e:Power4.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-start="1500" style="z-index: 7;">
+                  Inculcate value Education to its students</div>
+              </li>
+
+              <!-- Slide 2 -->
+              <li data-index="rs-181" data-transition="zoomin" data-thumb="/static/images/it_service/slide1-B.jpg"
+                data-title="To Empower">
+                <img src="/static/images/it_service/slide1-B.jpg" class="rev-slidebg" alt="slider" data-no-retina>
+                <!-- similar layers as above -->
+                <!-- Title -->
+                <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" data-x="center" data-y="middle"
+                  data-fontsize="70" data-lineheight="70" data-transform_in="y:[-100%];s:2000;e:Power4.easeInOut;"
+                  data-start="1000" style="z-index: 6;">To Empower</div>
+
+                <!-- Subtitle -->
+                <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" data-x="center"
+                  data-y="middle" data-voffset="52" data-transform_in="y:[100%];s:2000;e:Power4.easeInOut;"
+                  data-start="1500" style="z-index: 7;">Education set up and over the decades since 1985</div>
+              </li>
+
+              <!-- Slide 3 -->
+              <li data-index="rs-18" data-transition="zoomin" data-thumb="/static/images/it_service/slides1-C.jpg"
+                data-title="To Enrich">
+                <img src="/static/images/it_service/slides1-C.jpg" class="rev-slidebg" alt="slider" data-no-retina>
+
+                <!-- Title -->
+                <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" data-x="center" data-y="middle"
+                  data-fontsize="70" data-lineheight="70" data-transform_in="y:[-100%];s:2000;e:Power4.easeInOut;"
+                  data-start="1000" style="z-index: 6;">To Enrich</div>
+
+                <!-- Subtitle -->
+                <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" data-x="center"
+                  data-y="middle" data-voffset="52" data-transform_in="y:[100%];s:2000;e:Power4.easeInOut;"
+                  data-start="1500" style="z-index: 7;">Growing with a dynamic outlook</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end section -->
+  <!-- section -->
+  <div class="section padding_layout_1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="main_heading text_align_center">
+              <h2>Why Choose Pragathi</h2>
+              <p class="large">To Educate, To Empower & To Enrich!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i1.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">International<br />Quality<br />Education
+            </h4>
+            <p>Ensuring quality education through quality teachers , learning tools, modern infrastructures and
+              facility.</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i5.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">Skill Development Program
+              (Earn while Learn)
+            </h4>
+            <p>Offering skilled development offered by NSDC certified program where they are getting job training in the
+              campus.</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i2.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">Job oriented training<br />program</h4>
+            <p>Job oriented training program in skill development area and after training working for MNC/SME in campus
+              with stipend.</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i6.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">Language development program</h4>
+            <p>Providing English development coaching entire course period for getting career opportunity across Global.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i3.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">Educational Loan /Scholarship/ Sponsorship</h4>
+            <p>We help make the student to process to avail the education loan / scholarship/ Sponsorship process
+              smarter</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+          <div class="full text_align_center margin_bottom_30 margin_0">
+            <div class="center">
+              <div class="icon"> <img src="/static/images/it_service/i4.png" alt="img" /> </div>
+            </div>
+            <h4 class="theme_color">100% <br />placement<br />guarantee</h4>
+            <p>All student who passed with 60% in academic or who complete training with stipend will placed after
+              completed course</p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 35px">
+        <div class="col-md-8">
+          <div class="full margin_bottom_30">
+            <div class="accordion border_circle">
+              <div class="bs-example">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i
+                            class="fa fa-group"></i>Chairman Desk<i class="fa fa-angle-down"></i></a> </p>
+                    </div>
+
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+
+                        <p style="text-align:center; font-weight:bold;">"Education is not mere accumulation of facts; it
+                          is preparation of life itself."</p><br />
+                        <p style="text-align:justify;">Education is knowledge imbued with wisdom and ethics. It develops
+                          the personality of the students, molds their character and develops mental skills to help them
+                          cope with problems and challenges of the complex world of today. One of the most significant
+                          character traits that need to be instilled in our youth during their education is a finely
+                          ingrained attitude of service- before-self. The aim is to make them successful not only in
+                          life, but also conscious of their duties and responsibilities towards their fellow citizens.
+                          It is with this vision that the Pragathi Group of Institutions was established in
+                          1984.<br /><br />
+                          The Pragathi Group of Institutions exemplify the fact that sky is not the limit in the pursuit
+                          of excellence. The aim of our Institutions is to promote a system of integral education in a
+                          congenial. We believe that our students need to learn academic along with skill development &
+                          career development courses There is, therefore, every reason to place a renewed emphasis on
+                          the humanistic dimensions of education, enabling each person to grasp and appreciate the
+                          individuality of others, and to discover .Our Institutions curricula also allows our teachers
+                          the flexibility to adopt innovative methods to stimulate interest and attention among the
+                          students and develop in them an appreciation for the values of the past, the excitement of the
+                          present and the challenges of the future.<br /><br />
+                          <b>Dr.L.Hanumanthaiah</b><br />
+                          Chairman<br />
+                          Pragathi Group<br /><br />
+                          <a style="font-weight:bold;" href="https://www.drlhanumanthaiah.com/">Click here to know
+                            more</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><i
+                            class="fa fa-user" aria-hidden="true"></i> CEO (Chief Executive Officer) Desk<i
+                            class="fa fa-angle-down"></i></a> </p>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <p style="text-align:center; font-weight:bold;">“Education is not simply a content delivery
+                          system; rather, it is a system designed to<br />
+                          help all Student reach their full potential and enter society as full and productive
+                          citizens.”</p>
+                        <br />
+                        <p>Pragathi Group of Institution (PGI) has consistently endeavored to provide high-quality
+                          education to student. Over the years, the Institute has been continuously evolving by pursuing
+                          and inculcating several innovative ways of teaching, learning, and experience-sharing by
+                          demonstrating accomplishment of time-bound Mission-oriented goals. This has been made possible
+                          by creating an intellectual capital of in-house human resources of highly qualified and
+                          experienced faculty, state-of-the-art infrastructure, modernized computer lab with Wi-Fi and
+                          the sprawling Central Library for continuous innovations in the areas of research and
+                          publications– apart from launching of innovative programs.<br /><br />
+                          Reasons galore why we are unique compare with any top institutions in Bangalore but also as
+                          difference from any institution in India!. Along with excellent academic training we are
+                          providing skill development program in side campus to develop their secondary skill as
+                          substitute option, may they can chose this as their primary option also.</p><br />
+                        <p style="text-align:center; font-weight:bold;">“It is well said by an individual, “Education is
+                          more important but skill is the most important”</p><br />
+                        <p>Skills Development are important as these bring positive effects in the life of an
+                          individual. In this 21st century and in competitive world, skills development are essential to
+                          gain success not only for a healthy society but also for successful individuals. Thus, it is
+                          important to evolve skill training among Student in their academic period from an early age
+                          itself.</p><br />
+                        <p style="text-align:center; font-weight:bold;">“Regional language sets you in a corridor for
+                          life.<br />
+                          International language opens every door along the way.”
+                        </p><br />
+                        <p>
+                          In a globalized world, where mobility is facilitated, learning International language is a
+                          wonderful benefit. Not only does it help when traveling, it is also a great advantage for
+                          studying in general and for career prospects abroad. Acquiring a second language enables us to
+                          develop various mental abilities at all ages. In PGI along with academic, proving
+                          International language training throughout the course period.</p><br />
+                        <p style="text-align:center; font-weight:bold;">“Earned money brings you security, borrowed
+                          money gets you slavery.”</p><br />
+                        <p>After completing skill development program, we initiative to provide training in MNC/ SME
+                          with stipend in the campus itself. Through this PGI literate student working ethics before
+                          they are entering in working life .By getting handsome stipend they are able to earn partial
+                          or entire expenses in study period.</p><br />
+                        <p style="text-align:center; font-weight:bold;">“An idle mind is the devil’s workshop”</p><br />
+                        <p>We make the student busy full time in the campus by providing academic curriculum, skill
+                          development program, language development program, games and part time job in interesting
+                          manner.
+                          <br /><br />
+                          I look forward to your joining us in our mission for excellence and contribute to our journey
+                          towards exploring new frontiers great opportunities in the unique educational system arena
+                          befitting our hard-earned reputation as one among the exclusive unique educational institution
+                          in India!
+                          <br /><br />
+                          <b>Anil Rc</b><br />
+                          CEO (Chief Executive Officer)<br />
+                          Pragathi Group
+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i
+                            class="fa fa-eye"></i> Vision<i class="fa fa-angle-down"></i></a> </p>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <ul class="categary">
+                          <li>Provide world class education to student</li>
+                          <li>Provide special coaching to student for preparing the competitive examination while they
+                            are doing their academic. Through that students are getting capability to face any
+                            competitive examination and secure their career future.</li>
+                          <li>Provide regular coaching for develop their international language throughout the course
+                            period. Through that students can overcome the geographical barrack for developing their
+                            career. Students are getting training for Spoken, writing skill & public speaking.</li>
+                          <li>Motivate the students to develop their career in administrative level and value added
+                            professions like Civil service, Chattered accountant, IT programmers & Entrepreneur through
+                            demonstrate video clipping of success people.</li>
+                          <li>
+                            By Improving working skill of the student, develop them for self-dependence, literate them
+                            for importance and ethics of working system & creating opportunity to them to earn while
+                            learning.
+                          </li>
+                          <li>Help the student to get education loan and literate them to importance of repayment.</li>
+                          <li>Help the student to get sponsors and scholarship for the education on merit & Income
+                            basis.</li>
+                          <li>Place 100% outgoing student in job with deserved remuneration.</li>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion"
+                          href="#collapseThree"><i class="fa fa-flag"></i> Mission<i class="fa fa-angle-down"></i></a>
+                      </p>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <ul class="categary">
+                          <li>Highly qualified facilities with good communication skill trained the student from smart
+                            class room with modern facility. </li>
+                          <li>We are conducting couching classes every week end from 7 AM to 9.00 AM for International
+                            language development & 9.30 AM to 12 PM for UPSE examination, CA Foundation, PSC, SSc & BPO
+                            test. Through that we are preparing students face any competitive Examination.</li>
+                          <li>Academic classes will be start from 7 AM to 12 AM and Skill development training will be
+                            start from 1 PM to 6 PM. Skill development is training for 6 months. Classes will be taking
+                            care by highly qualified professionals . Six month after skilled development training,
+                            students are getting opportunity to work in relevant company with stipend starting from 4 k
+                            to 12 k for a student per month. It will help the student getting minimum 30 months
+                            experience in one more profession while they are studying. Then the interested student can
+                            joining the company with experienced staff salary where they got skilled experience. This
+                            work will support student to follow working ethics and earning habits.</li>
+                          <li>We are having legal team who are expert in loan arrangement for the student for their
+                            education purposes with law rate of interest. repayment starting only one year after
+                            completing the course only . Hence students are experienced skilled in one profession and
+                            graduate with good communication skill, our placement division can place the students as
+                            soon as they complete course with good communication skill. Repayment on education loan in
+                            time is not a big hurdles to them.</li>
+                          <li>Our team is working to find out scholarship and sponsor ship to Merits student and
+                            financially week student.</li>
+                          <li>Providing food in campus and hostel near the campus with our observation.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="full" style="margin-top: 35px;">
+            <h3>About Pragathi</h3>
+            <p>The institution prepares students into self-reliant, independent thinking, globally relevant, skilled and
+              socially useful citizens of the nation embedded with values to contribute in their own mite to the
+              society.</p>
+            <p><a class="btn main_bt" href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- section -->
+  <div class="section padding_layout_1 light_silver ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="main_heading text_align_center">
+              <h2>About the Courses</h2>
+              <p class="large">Department working under the Pragathi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si1.png" alt="img" /></div>
+                    <h4 class="service-heading">PU College</h4>
+                    <p>Pre University courses is offer by department of Pre University Education, Karnataka. </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si2.png" alt="img" /></div>
+                    <h4 class="service-heading">UG College</h4>
+                    <p>Pragathi Degree College is affiliated with Bangalore University, Bengaluru. </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si3.png" alt="img" /></div>
+                    <h4 class="service-heading">BEd</h4>
+                    <p>BEd two years award of a bachelor’s degree is affiliated with Bangalore University.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si4.png" alt="img" /></div>
+                    <h4 class="service-heading">PG College</h4>
+                    <p>Pragathi Post Graduate College is affiliated with Bangalore University, Bengaluru.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si5.png" alt="img" /></div>
+                    <h4 class="service-heading">Health & Science (Nursing)</h4>
+                    <p>BSc nursing course is affiliated with Rajiv Gandhi University of Health Sciences and listed by
+                      INC.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="full">
+                <a href="#">
+                  <div class="service_blog_inner">
+                    <div class="icon text_align_center"><img src="/static/images/it_service/si6.png" alt="img" /></div>
+                    <h4 class="service-heading">NSDC Program</h4>
+                    <p>Skill development program affiliated with National Skill Development Corporation (NSDC), India.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section -->
+
+  <!-- InstanceEndEditable -->
+
+  <div class="section padding_layout_1 testmonial_section white_fonts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="main_heading text_align_left">
+              <h2 style="text-transform: none;">Students Talk</h2>
+              <p class="large">Here are testimonials from students..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="full">
+            <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                <li data-target="#testimonial_slider" data-slide-to="2"></li>
+              </ul>
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content">The college campus includes fully functional laboratories, huge
+                      lecture halls, auditorium, canteen, multipurpose ground, badminton court, library, reading room
+                      and indoor games room</div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client1.jpg"
+                        class="img-responsive" alt="img" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Garima</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content"> Good experienced faculty that help students whenever required.The
+                      equipments are good and functional . The clinical experience is quite good as well.</div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client2.jpg"
+                        class="img-responsive" alt="img" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Vijay Joseph</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-container">
+                    <div class="testimonial-content">My campus life was very very good. Me and my friends are enjoyed
+                      very much in the campus of our college. It was my best memories. My teachers are very kind &
+                      supportive to me and every other students. </div>
+                    <div class="testimonial-photo"> <img src="/static/images/it_service/client3.jpg"
+                        class="img-responsive" alt="img" width="150" height="150"> </div>
+                    <div class="testimonial-meta">
+                      <h4>Priya Gopal</h4>
+                      <span class="testimonial-position">Student of Pragathi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="full"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- section -->
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="contact_us_section">
+              <div class="call_icon"> <img src="/static/images/it_service/phone_icon.png" alt="img" /> </div>
+              <div class="inner_cont">
+                <h2>CONTACT FOR ADMISSION<br />8861215361, 8287600521</h2>
+
+              </div>
+              <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Download
+                  Prospectors</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- section -->
+  <div class="section padding_layout_1" style="padding:10px 0;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+  <!-- Modal -->
+  <div class="modal fade" id="search_bar" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
+              <div class="navbar-search">
+                <form action="#" method="get" id="search-global-form" class="search-global">
+                  <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value=""
+                    class="search-global__input">
+                  <button class="search-global__btn"><i class="fa fa-search"></i></button>
+                  <div class="search-global__note">Begin typing your search above and press return to search.</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Model search bar -->
+
+  <!-- Floating Button -->
+  <div class="float-button blink" onclick="openForm()" style="
+  font-weight: 900;
+  font-size: 26px;
+  font-family: math;
+  background-color: red;
+">Admission Form</div>
+
+  <!-- Popup Form -->
+  <div class="form-popup" id="myForm">
+    <form id="subscription-form" enctype="multipart/form-data" class="form-container">
+
+      <!-- Close Button -->
+      <button type="button" class="close-btn" onclick="closeForm()">×</button>
+
+      <h2>Admission Enquiry Form</h2>
+
+      <div class="row-flex">
+        <input type="text" placeholder="Enter Name" name="name" required>
+        <input type="date" name="dob" required>
+      </div>
+
+      <div class="row-flex">
+        <input type="tel" placeholder="Mobile Number" name="mobile" required>
+        <input type="email" placeholder="Email" name="email" required>
+      </div>
+
+      <div class="row-flex">
+        <input type="text" placeholder="Medium Studied" name="medium" required>
+        <input type="number" placeholder="Percentage" name="marks" required>
+      </div>
+
+      <div class="row-flex">
+        <select name="course" required>
+          <option value="">Select Course</option>
+          <option value="BCOM">BCOM</option>
+          <option value="BBA">BBA</option>
+          <option value="BCA">BCA</option>
+          <option value="BA JMM">BA JMM</option>
+          <option value="GNM">GNM</option>
+        </select>
+        <input type="text" placeholder="District" name="district" required>
+      </div>
+
+      <div class="row-flex">
+        <input type="text" placeholder="State" name="state" required>
+        <input type="file" name="file" required>
+      </div>
+
+      <input type="submit" value="Submit" style="
+      background-color: #c29c50;
+      color: #000000;
+      width: 100px;
+      margin: 10px auto;
+      display: block;
+      height: 35px;
+      border-radius: 9px;
+    ">
+    </form>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.body.classList.add("modal-open");
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("subscription-form");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/api/admissions/", {
+            method: "POST",
+            body: formData
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("✅ Admission form submitted successfully!");
+            form.reset();
+            closeForm();
+          } else {
+            alert("❌ Error: " + JSON.stringify(data));
+          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          alert("❌ Something went wrong. Please try again.");
+        }
+      });
+    });
+  </script>
+
+
+  <section class="call-buton"><a class="cc-calto-action-ripple" href="tel:+918861215361"><i class="fa fa-phone"></i>
+    </a>
+  </section>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <div class="floating_btn">
+    <a target="_blank" href="https://api.whatsapp.com/send?phone=+918861215361&text=Hello%21%20.">
+      <div class="contact_icon">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </a>
+    <p class="text_icon">Talk to us?</p>
+  </div>
+
+
+  <!-- footer -->
+  <footer class="footer_style_2">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Column 1: Logo and Social Media -->
+        <div class="col-md-3 text-center mb-4">
+          <img src="/static/images/logos/logo2.png" alt="Logo" style="height: 125px;">
+          <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Academic Courses -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>ACADEMIC COURSES</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="pu-arts.html"><i class="fa fa-angle-right"></i>PU Arts</a></li>
+            <li><a href="pu-commerce.html"><i class="fa fa-angle-right"></i>PU Commerce</a></li>
+            <li><a href="bcom.html"><i class="fa fa-angle-right"></i>B.Com</a></li>
+            <li><a href="ba-arts.html"><i class="fa fa-angle-right"></i>BA Arts</a></li>
+            <li><a href="bca.html"><i class="fa fa-angle-right"></i>BCA</a></li>
+            <li><a href="bba-finance-and-marketing.html"><i class="fa fa-angle-right"></i>BBA- Finance & Marketing</a>
+            </li>
+            <li><a href="bsc-nursing.html"><i class="fa fa-angle-right"></i>BSc Nursing</a></li>
+            <li><a href="gnm-3years.html"><i class="fa fa-angle-right"></i>GNM - 3 Years</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Additional Links -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>ADDITIONAL LINKS</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a></li>
+            <li><a href="facility.html"><i class="fa fa-angle-right"></i>Facility</a></li>
+            <li><a href="nsdc.html"><i class="fa fa-angle-right"></i>NSDC</a></li>
+            <li><a href="gallery.html"><i class="fa fa-angle-right"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact and Add-On Programs -->
+        <div class="col-md-3">
+          <div class="main-heading left_text">
+            <h2>Contact Us</h2>
+          </div>
+          <p>
+            # 57, Pragathi Group, Dr. S. Radha Krishnan Road,<br>
+            Chikkabanavara, Bangalore, Karnataka - 560090<br>
+            <span style="font-size:18px;"><a href="tel:+8861215361">+8861215361</a></span>
+          </p>
+          <p>
+            <a href="https://www.google.com/maps?q=13.0805,77.4946" target="_blank">
+              <i class="fa fa-map-marker"></i> View Location on Map
+            </a>
+          </p>
+          <div class="main-heading left_text mt-4">
+            <h2>Add on Program</h2>
+          </div>
+          <ul class="footer-menu">
+            <li><a href="skill-development-program.html"><i class="fa fa-angle-right"></i>Skill
+                Development and Integrated Course</a></li>
+            <li><a href="educational-loan-assistance.html"><i class="fa fa-angle-right"></i>Educational Loan
+                Assistance</a></li>
+            <li><a href="Scholarship-and-sponsorship.html"><i class="fa fa-angle-right"></i>Scholarship &
+                Sponsorship</a></li>
+            <li><a href="placement-assistance.html"><i class="fa fa-angle-right"></i>Placement Assistance</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="cprt text-center mt-4">
+        <p>Pragathi Group Of Institution &copy; Copyrights 2020</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- end footer -->
+  <!-- jQuery first -->
+  <script src="/static/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/static/js/bootstrap.min.js"></script>
+
+  <!-- Menu -->
+  <script src="/static/js/menumaker.js"></script>
+
+  <!-- WOW.js Animation -->
+  <script src="/static/js/wow.js"></script>
+
+  <!-- Revolution Slider Core JS -->
+  <script src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- Revolution Slider Extensions -->
+  <script src="/static/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="/static/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="/static/js/custom.js"></script>
+
+
+</body>
+<!-- InstanceEnd -->
+
+</html>

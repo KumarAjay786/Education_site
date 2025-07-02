@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="icon" href="/static/images/fevicon/fevicon.png" type="image/gif" />
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #188346;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .login-card {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 38px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <h3 class="text-center mb-4">Login</h3>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePassword('password')">Show</span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <div class="text-center mt-3">
+                <a href="forgot-password.html" id="forgotPasswordLink">Forgot Password?</a>
+            </div>
+
+
+            <!-- Added home link -->
+            <p class="text-center mt-3 home-link">
+                <a href="index.html">← Go back to home page</a>
+            </p>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+
+            loginForm.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+
+                if (!email || !password) {
+                    alert("Please enter both email and password.");
+                    return;
+                }
+
+                try {
+                    const response = await fetch("/api/token/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ email, password }),
+                    });
+
+                    const data = await response.json();
+                    console.log("Login Response:", data);
+
+                    if (response.ok) {
+                        // Save tokens
+                        localStorage.setItem("access_token", data.access);
+                        localStorage.setItem("refresh_token", data.refresh);
+
+                        // Check if superuser (from JWT claim)
+                        const base64Url = data.access.split('.')[1];
+                        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                        const payload = JSON.parse(decodeURIComponent(escape(window.atob(base64))));
+                        if (payload.is_superuser) {
+                            window.location.href = "/admin_dashboard.html";
+                        } else {
+                            alert("Only Admins are allowed to log in.");
+                        }
+                    } else {
+                        alert(data.detail || "Login failed");
+                    }
+                } catch (error) {
+                    console.error("Login Error:", error);
+                    alert("Network error. Please try again.");
+                }
+            });
+
+            window.togglePassword = function (id) {
+                const input = document.getElementById(id);
+                const toggle = input.nextElementSibling;
+                const isPassword = input.type === "password";
+
+                input.type = isPassword ? "text" : "password";
+                toggle.textContent = isPassword ? "Hide" : "Show";
+            };
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
