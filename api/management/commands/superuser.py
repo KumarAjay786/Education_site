@@ -9,7 +9,7 @@ class Command(BaseCommand):
         User = get_user_model()
         # Hardcoded credentials
         email = 'info@pragathiedu.com'
-        password = 'Pragathi@2020'
+        password = '**************'
         name = 'Admin User'
         username = email  # Ensure username is set for default Django user model
 
